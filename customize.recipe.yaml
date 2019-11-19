@@ -1,0 +1,17 @@
+# encoding: utf-8
+---
+recipe:
+  Rx: customize
+  args:
+    - frontend
+  description: >-
+    Customize Weasel/Squirrel to use "Uji Kintoki Light" theme.
+
+install_files: >-
+  # uji_kintoki_light_theme.yaml
+
+patch_files:
+  ${frontend:-_}.custom.yaml:
+    - patch/+:
+        preset_color_schemes/uji_kintoki_light:
+          __include: uji_kintoki_light_theme:/color_scheme_uji_kintoki_light
